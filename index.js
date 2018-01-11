@@ -21,17 +21,13 @@ function createPost() {
 
 function postComment() {
   debugger;
-  var comment = document.getElementById("comment").value;
+  var comment = document.getElementById("comments-template");
   var commenter = document.getElementById("commenter").value;
 
   var commentTemplate = document.getElementById("comment-template").innerHTML;
 
   //create template function
   var templateFn = _.template(commentTemplate);
-
-  var commentsDiv = document.getElementById("comments").innerHTML;
-
-  var pageTemplateFn = _.template(commentsDiv);
 
   //execute template function with JSON object for the interpolated values
   var templateHTML = templateFn({ 'comment': comment, 'commenter': commenter });

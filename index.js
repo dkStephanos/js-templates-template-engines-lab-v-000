@@ -20,6 +20,7 @@ function createPost() {
 }
 
 function postComment() {
+  debugger;
   var comment = document.getElementById("comment").value;
   var commenter = document.getElementById("commenter").value;
 

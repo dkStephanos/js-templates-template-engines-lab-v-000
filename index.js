@@ -10,6 +10,7 @@ function createPost() {
 
    var postsDiv = document.getElementById("page-template").innerHTML;
 
+   var pageTemplateFn = _.template(postsDiv);
 
    //execute template function with JSON object for the interpolated values
    var templateHTML = templateFn({ 'title': title, 'post': postContent, 'author': author });

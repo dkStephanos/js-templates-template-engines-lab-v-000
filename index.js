@@ -28,11 +28,13 @@ function postComment() {
   //create template function
   var templateFn = _.template(commentTemplate);
 
-  var commentsDiv = document.getElementById("comments");
+  var commentsDiv = document.getElementById("comments").innerHTML;
+
+  var pageTemplateFn = _.template(commentsDiv);
 
   //execute template function with JSON object for the interpolated values
   var templateHTML = templateFn({ 'comment': comment, 'commenter': commenter });
 
   //append rather than replace!
-  commentsDiv.innerHTML += templateHTML;
+  commentsDiv += templateHTML;
 }

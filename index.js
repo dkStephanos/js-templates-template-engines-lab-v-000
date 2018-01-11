@@ -29,6 +29,9 @@ function postComment() {
   //create template function
   var templateFn = _.template(commentTemplate);
 
+  var commentsDiv = document.getElementById("comments-template").innerHTML;
+
+
   //execute template function with JSON object for the interpolated values
   var templateHTML = templateFn({ 'comment': comment, 'commenter': commenter });
 

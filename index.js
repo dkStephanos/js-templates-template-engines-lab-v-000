@@ -4,13 +4,12 @@ function createPost() {
    var author = document.getElementById("author").value;
 
    var postTemplate = document.getElementById("post-template").innerHTML;
-
+   var postsDiv = document.getElementById("page-template").innerHTML;
+   
    //create template function
    var templateFn = _.template(postTemplate);
 
-   var postsDiv = document.getElementById("page-template").innerHTML;
 
-   var pageTemplateFn = _.template(postsDiv);
 
    //execute template function with JSON object for the interpolated values
    var templateHTML = templateFn({ 'title': title, 'post': postContent, 'author': author });

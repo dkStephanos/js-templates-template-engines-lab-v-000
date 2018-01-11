@@ -20,8 +20,8 @@ function createPost() {
 }
 
 function postComment() {
-  var comment = document.getElementById("comment").value;
-  var commenter = document.getElementById("commenter").value;
+  var comment = document.getElementById("comment-body").value;
+  var commenter = document.getElementById("commenter-name").value;
 
   var commentTemplate = document.getElementById("comment-template").innerHTML;
 
